@@ -20,12 +20,12 @@ data to your function.
 
 The main function is defined in `index.js`. `tests.js` imports this function and tests it on 7 cases, given the constraints of the problem definition (i.e. assuming valid data will be passed to the function). Running `node tests.js` should return true, true, true, true, false, true, false.
 
-* Assumption 1: `bingoCard` is a 1-D array containing 25 numbers.
+* Assumption 1: `bingoCard` is a 1-D array containing numbers.
 * Assumption 2: `drawnNumbers` is a 1-D array containing numbers, with no limit on length of the array.
 
 # Logic
 
-To keep track of the number of drawn numbers in each row, column, and diagonal, we first define a dictionary `solution` with keys "columns", "rows", and "diagonals", whose values are arrays of ints of length 5, 5, and 2, respectively. The number of drawn numbers in column `i` is maintained in the `i`-th element of `solution.columns`.
+To keep track of the tally of drawn numbers in each row, column, and diagonal, we first define a dictionary `solution` with keys "columns", "rows", and "diagonals", whose values are arrays of integers of length 5, 5, and 2, respectively. The number of drawn numbers in column `i` is maintained in the `i`-th element of `solution.columns`.
 
 The idea is to iterate through the `bingoCard` and, for each number on it, check if it belongs to `drawnNumbers`. Since we're not given an upper bound for the length of `drawnNumbers`, we first convert it to a `Set()` to ensure constant look-up time on every iteration of the for loop.
 
