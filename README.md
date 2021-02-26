@@ -37,8 +37,8 @@ The function will return false if, after iterating through all the numbers on th
 
 # Big-O analysis
 
-Time complexity: O(1). The for loop is always limited to the 25 numbers on the `bingoCard`, and the look up in `drawnNumbers` is also constant since we use a set.
+Time complexity: O(1). The for loop never iterates through more than the 25 numbers on the `bingoCard`, and the look up in `drawnNumbers` is also constant since we use a set.
 
-Space complexity: O(k), where k is the length of `drawnNumbers`, since we create a set with the elements from drawnNumbers. The dictionary we create is of fixed size, since it is based on the fixed size of the `bingoCard`, so doesn't contribute here.
+Space complexity: O(k), where k is the length of `drawnNumbers`, since we create a set with the elements from drawnNumbers. The dictionary we create is of fixed size, since it is based on the fixed size of the `bingoCard`, so it doesn't contribute here.
 
-Could be turned into a O(k) time, O(1) space complexity solution by performing look up on the original array `drawnNumbers` instead of creating a set.
+This could be turned into a O(k) time, O(1) space complexity solution by performing look up on the original array `drawnNumbers` instead of creating a set.
