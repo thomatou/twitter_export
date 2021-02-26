@@ -18,7 +18,7 @@ data to your function.
 
 # Solution by Thomas
 
-The main function is defined in `index.js`. `tests.js` imports this function and tests it on 7 cases, given the constraints of the problem definition (i.e. assuming valid data will be passed to the function). Running `node tests.js` should return true, true, true, true, false, true, false.
+The main function is defined in `index.js`. `tests.js` imports this function and tests it on 7 cases, using the constraints of the problem definition (i.e. assuming valid data will be passed to the function). Running `node tests.js` should return true, true, true, true, false, true, false.
 
 * Assumption 1: `bingoCard` is a 1-D array containing numbers.
 * Assumption 2: `drawnNumbers` is a 1-D array containing numbers, with no limit on length of the array.
