@@ -4,7 +4,10 @@ import datetime as dt
 
 
 class Get_Posts:
-
+"""
+Authentication is not required for searching a public user's timeline
+Authentication is required for searches of private users
+"""
     def __init__(self,
                 API_key,
                 API_secret_key,
@@ -23,12 +26,13 @@ class Get_Posts:
 
     def to_timestamp(self, s):
         """ Converts twitter created_at object to a UNIX timestamp """
+
         return float(dt.datetime.strptime(s, '%a %b %d %H:%M:%S %z %Y').timestamp())
 
     def binary_search(self, tweets, bottom, top, start_time):
         """
-        Search through a list of tweets for the first one that matches
-        the specified date
+        Search through a date-sorted list of tweets for the first one that
+        matches the specified date.
         When calling the function, tweets should be a list of tweet objects
         as returned by the twitter API, bottom should be set to 0, and
         top should be set to len(tweets)
